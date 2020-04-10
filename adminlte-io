@@ -1,0 +1,4 @@
+no curso ORM usa o projeto fundamentos de django implementando um frontend melhor que o bootstrap básico
+o projeto imprementa o adminlte.io/themes/adminLTE/index2.html
+e para isso tem que instalar o Dango adminLTE2 - documentação: django-adminlte2.readthedocs.io/en/latest
+quickstart mostra como instalar o pacote.

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Listagem de produtos
+{% endblock title %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in produtos %}
+            <tr>
+                <td>{{i.nome}}</td>
+                <td>{{i.descricao}}</td>
+                <td>{{i.valor}}</td>
+                <td>
+                    <a href="{% url 'editar_produto' i.id %}">Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'cadastrar_produto' %}"><button class="btn btn-primary">Cadastrar</button></a>
+{% endblock content %}

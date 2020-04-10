@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Listagem de Pedido
+{% endblock title %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        Dados do Produto
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Produto: {{produto.nome}}</h5>
+        <h5 class="card-title">Data cadastro produto: {{produto.data_produto}}</h5>
+        <h5 class="card-title">Valor: {{produto.valor}}</h5>
+    </div>
+
+    <hr>
+    <h4>Produtos do pedido: </h4>
+    {% for i in pedido.produtos.all %}
+    <h5>{{i.nome}}</h5>
+    {% endfor %}
+</div>
+
+{% endblock content %}
