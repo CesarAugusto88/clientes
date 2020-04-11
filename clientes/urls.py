@@ -2,8 +2,10 @@ from django.urls import path
 from clientes.views.cliente_views import *
 from clientes.views.pedido_views import *
 from clientes.views.produto_views import *
-
+from django.views.generic import RedirectView
 urlpatterns = [
+
+    path('', RedirectView.as_view(url='/listar_clientes')),
     path('listar_clientes', listar_clientes, name='listar_clientes'),
     path('cadastrar_cliente', inserir_cliente, name='cadastrar_cliente'),
     path('listar_cliente/<int:id>', listar_cliente_id, name='listar_cliente_id'),
